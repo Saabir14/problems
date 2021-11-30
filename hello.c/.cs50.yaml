@@ -1,7 +1,1 @@
-check50:
-  checks:
-    hello world:
-      - run: |
-          clang hello.c;
-          ./a.out
-        stdout: Hello, World!\n
+check50: true
