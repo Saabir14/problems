@@ -7,6 +7,7 @@ def exists():
   check50.exists("hello.c")
   
 @check50.check(exists)
+def compiles()
   """hello.c compiles"""
   check50.c.compile("hello.c")
   
