@@ -13,5 +13,5 @@ def compiles():
   
 @check50.check(compiles)
 def prints_hello():
-  """prints "hello, world\\n" """
+  """prints "hello, World\\n" """
   check50.run("./hello").stdout("[Hh]ello, [Ww]orld!?\n", regex=True).exit(0)
