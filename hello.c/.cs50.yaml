@@ -1,7 +1,7 @@
 check50:
   checks:
     hello world:
-      - run:
+      - run: |
         make hello
         ./hello
      stdout: Hello, World!
