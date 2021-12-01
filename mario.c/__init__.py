@@ -12,10 +12,12 @@ def compiles():
   check50.c.compile("mario.c")
 
 def piramid(n):
+  if n < 1: return ''
+  elif n == 1: return '#'
+  else: return piramid(n - 1) + '\n' + n * '#'
   
-  
+@check50.check(compiles)
 for i in range(8):
-  @check50.check(compiles)
   def prints_piramid():
     """prints piramid{i}"""
-    check50.run("./mario").stdout("?\n", regex=True).exit(0)
+    check50.run("./mario").stdout(piramid(i) + "?\n", regex=True).exit(0)
