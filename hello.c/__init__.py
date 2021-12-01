@@ -3,15 +3,20 @@ import check50.c
 
 @check50.check()
 def exists():
-  """hello.c Exists"""
-  check50.exists("hello.c")
-  
+    """hello.c exists"""
+    check50.exists("hello.c")
+
 @check50.check(exists)
 def compiles():
-  """hello.c compiles"""
-  check50.c.compile("hello.c")
-  
+    """hello.c compiles"""
+    check50.c.compile("hello.c", lcs50=True)
+
 @check50.check(compiles)
-def prints_hello():
-  """prints "hello, World\\n" """
-  check50.run("./hello").stdout("[Hh]ello, [Ww]orld!\n", regex=True).exit(0)
+def Saabir():
+    """responds to name Saabir"""
+    check50.run("./hello").stdin("Saabir").stdout("Saabir").exit()
+
+@check50.check(compiles)
+def Saim():
+    """responds to name Saim"""
+    check50.run("./hello").stdin("Saim").stdout("Saim").exit()
