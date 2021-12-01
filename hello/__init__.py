@@ -12,11 +12,11 @@ def compiles():
     check50.c.compile("hello.c", lcs50=True)
 
 @check50.check(compiles)
-def emma():
-    """responds to name Emma"""
-    check50.run("./hello").stdin("Emma").stdout("Emma").exit()
+def saabir():
+    """responds to name Saabir"""
+    check50.run("./hello").stdin("Saabir").stdout("Saabir").exit()
 
 @check50.check(compiles)
-def rodrigo():
-    """responds to name Rodrigo"""
-    check50.run("./hello").stdin("Rodrigo").stdout("Rodrigo").exit()
+def Saim():
+    """responds to name Saim"""
+    check50.run("./hello").stdin("Saim").stdout("Saim").exit()
